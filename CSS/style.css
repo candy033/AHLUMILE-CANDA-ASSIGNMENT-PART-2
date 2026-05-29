@@ -1,0 +1,256 @@
+/* ==========================================================================
+   1. VARIABLES & PROFESSIONAL PALETTE
+   ========================================================================== */
+:root {
+    --primary-green: #0b4f2c;       /* Deep, rich academic green matching your badge */
+    --light-green: #f2f7f4;         /* Premium off-white with a touch of mint mint background */
+    --accent-gold: #d4af37;          /* Luxury metallic gold for lines/highlights */
+    --hover-gold: #b8972f;           /* Deep gold for hover animations */
+    --text-dark: #1e293b;            /* Sharp slate charcoal for crisp text readability */
+    --text-light: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.96); /* Solid crisp white with minor transparency */
+    --font-main: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   2. BODY & THE WATERMARKED BACKGROUND EFFECT
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: 1.65;
+    background-color: var(--light-green);
+    
+    /* Professional Background Watermark Setup */
+    background-image: linear-gradient(rgba(242, 247, 244, 0.92), rgba(242, 247, 244, 0.92)), 
+                      url('../images/image 1.jpg'); /* Assumes your badge image is saved as image 1.jpg */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45vw; /* Perfectly scaled emblem behind the content layer */
+}
+
+/* ==========================================================================
+   3. STICKY PROFESSIONAL HEADER & NAVIGATION
+   ========================================================================== */
+nav {
+    background-color: var(--primary-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 8px 22px;
+    margin: 0 8px;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:hover {
+    color: var(--accent-gold);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   4. HERO TITLES
+   ========================================================================== */
+header {
+    text-align: center;
+    padding: 55px 20px 45px 20px;
+    background: transparent;
+}
+
+header h1 {
+    color: var(--primary-green);
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   5. CONTENT CARDS (PREMIUM CONTENT LAYER)
+   ========================================================================== */
+.container {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(11, 79, 44, 0.08);
+}
+
+h2 {
+    color: var(--primary-green);
+    font-size: 1.65rem;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Sharp decorative accent line */
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 65px;
+    height: 3.5px;
+    background-color: var(--accent-gold);
+    border-radius: 2px;
+}
+
+p {
+    margin-bottom: 22px;
+    font-size: 1.05rem;
+    text-align: justify;
+    color: #334155;
+}
+
+/* ==========================================================================
+   6. FLYERS & IMAGES (CLEAN PRESENCE)
+   ========================================================================== */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 35px auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border: 3px solid #ffffff;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.01);
+}
+
+/* Keeping iframes consistent with media layouts */
+iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   7. CLEAN FORMS & CONTACT LAYOUT
+   ========================================================================== */
+form {
+    background: transparent;
+    padding: 10px 0 0 0;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary-green);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 24px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(11, 79, 44, 0.1);
+}
+
+button[type="submit"] {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-green);
+    padding: 15px 30px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(11, 79, 44, 0.15);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-gold);
+    border-color: var(--accent-gold);
+    color: var(--text-dark);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* ==========================================================================
+   8. FOOTER DEFINITION
+   ========================================================================== */
+footer {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 80px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border-top: 4.5px solid var(--accent-gold);
+}
+
+footer p {
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--text-light);
+}
+
+
