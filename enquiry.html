@@ -3,8 +3,8 @@
 <head>
     <title>Enquiry - Hlumis’ Imfundo Foundation</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
 <nav>
@@ -20,40 +20,29 @@
 </header>
 
 <div class="container">
+    <form id="enquiryForm"></form>
+</div>
 
-    <!-- Main Enquiry Form Container -->
-    <form id="enquiryForm">
-        <div>
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-
-        <div>
-            <label for="type">Enquiry Type:</label>
-            <select id="type" name="type" required>
-                <option value="" disabled selected>-- Select an Option --</option>
-                <option value="volunteer">Volunteer</option>
-                <option value="sponsor">Sponsor</option>
-                <option value="general">General Inquiry</option>
-            </select>
-        </div>
-
-        <div>
-            <label for="message">Message Content:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-        </div>
-
-        <button type="submit">Submit Enquiry</button>
-    </form>
-        
-
+<div id="imageLightboxModal" style="display: none; position: fixed; inset: 0; background: rgba(11, 79, 44, 0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 20000; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease;">
+    <span id="closeLightbox" style="position: absolute; top: 25px; right: 35px; color: #ffffff; font-size: 40px; font-weight: bold; cursor: pointer; transition: color 0.3s;">&times;</span>
+    <img id="enlargedLightboxImage" style="max-width: 85%; max-height: 85%; border-radius: 12px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);" src="" alt="Enlarged View">
 </div>
 
 <footer>
     <p>© 2026 Hlumis’ Imfundo Foundation</p>
+    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
+        <a href="https://www.instagram.com/hlumisi_imfundo_official/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fab fa-instagram" style="font-size: 14px;"></i><small>Instagram</small>
+        </a>
+        <a href="https://www.facebook.com/p/HlumisImfundo-Academy-100064421240749/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fab fa-facebook-f" style="font-size: 14px;"></i><small>Facebook</small>
+        </a>
+        <a href="https://b2bhint.com/en/company/za/hlumisimfundo-foundation--K2021457252" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fas fa-briefcase" style="font-size: 14px;"></i><small>Registry</small>
+        </a>
+    </div>
 </footer>
 
 <script src="JAVASCRIPT/JavaScript.js"></script>
-
 </body>
 </html>
