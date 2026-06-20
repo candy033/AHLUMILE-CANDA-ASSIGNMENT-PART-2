@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Contact - Hlumis’ Imfundo Foundation</title>
+    <meta charset="UTF-8">
+    <title>Contact Us - Hlumis’ Imfundo Foundation</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
 <nav>
@@ -16,47 +17,55 @@
 </nav>
 
 <header>
-    <h1>Contact Us</h1>
+    <h1>Contact Our Academy Team</h1>
+    <p>Get in touch with us directly for any immediate institution inquiries.</p>
 </header>
 
 <div class="container">
-    <h2>Foundation Office</h2>
-    <p> Location 1: Gqeberha, Eastern Cape</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.584533265518!2d25.585894975070392!3d-33.79722551535416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7b2a3926a0f07d%3A0x160f000245f3ba0e!2sNxanelwimfundo%20Intermediate%20School!5e0!3m2!1sen!2sza!4v1775823165174!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <h2>Reach Out to Us</h2>
+    
+    <form id="contactForm">
+        <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        
+        <div>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="e.g. 081 234 5678">
+        </div>
+        
+        <div>
+            <label for="message">Message Content:</label>
+            <textarea id="message" name="message" rows="6" placeholder="Type your message here..."></textarea>
+        </div>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</div>
 
+<div id="imageLightboxModal" style="display: none; position: fixed; inset: 0; background: rgba(11, 79, 44, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 99999; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+    <span id="closeLightbox" style="position: absolute; top: 30px; right: 40px; color: rgba(255, 255, 255, 0.8); font-size: 45px; font-family: Arial, sans-serif; font-weight: 300; cursor: pointer; transition: color 0.3s ease; user-select: none;">&times;</span>
+    <img id="enlargedLightboxImage" style="max-width: 85%; max-height: 80vh; object-fit: contain; border: 3px solid #d6af37; border-radius: 16px; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6); transform: scale(0.92); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);" src="" alt="Enlarged View Layer">
+</div>
 
-    <h2>Email</h2>
-    <p>info@hlumisfoundation.org</p>
+<footer>
+    <p>© 2026 Hlumis’ Imfundo Foundation</p>
+    <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
+        <a href="https://www.instagram.com/hlumisi_imfundo_official/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fab fa-instagram" style="font-size: 14px;"></i><small>Instagram</small>
+        </a>
+        <a href="https://www.facebook.com/p/HlumisImfundo-Academy-100064421240749/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+            <i class="fab fa-facebook-f" style="font-size: 14px;"></i><small>Facebook</small>
+        </a>
+    </div>
+</footer>
 
-    <h2>Phone</h2>
-            <p>+27603724794</p>
-
-            <form id="contactForm" novalidate style="margin-top: 30px;">
-                <div>
-                    <label for="fullName">Full Name:</label>
-                    <input type="text" id="fullName" name="fullName" required>
-                </div>
-
-                <div>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div>
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="e.g. 0821234567" required>
-                </div>
-
-                <div>
-                    <label for="message">Message Content:</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
-                </div>
-
-                <button type="submit">Send Message</button>
-            </form>
-            </div> <footer>
-            <p>&copy; 2026 Hlumis' Imfundo Foundation</p>
-        </footer>
-
-        <script src="JAVASCRIPT/JavaScript.js"></script>
+<script src="JAVASCRIPT/JavaScript.js"></script>
 </body>
+</html>
