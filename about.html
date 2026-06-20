@@ -3,6 +3,8 @@
 <head>
     <title>About Hlumis’ Imfundo Foundation</title>
     <link rel="stylesheet" href="CSS/style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -32,8 +34,33 @@
 
 <img src="IMAGES/image2.jpg" alt="my about">
 
+<div id="imageLightboxModal" style="display: none; position: fixed; inset: 0; background: rgba(11, 79, 44, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 99999; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+    
+    <span id="closeLightbox" style="position: absolute; top: 30px; right: 40px; color: rgba(255, 255, 255, 0.8); font-size: 45px; font-family: Arial, sans-serif; font-weight: 300; cursor: pointer; transition: color 0.3s ease; user-select: none;">&times;</span>
+    
+    <img id="enlargedLightboxImage" style="max-width: 85%; max-height: 80vh; object-fit: contain; border: 3px solid var(--accent-gold, #d6af37); border-radius: 16px; box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6); transform: scale(0.92); transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);" src="" alt="Enlarged Institutional View">
+    
+</div>
+
 <footer>
  <p>© 2026 Hlumis’ Imfundo Foundation</p>
+ 
+ <div style="margin-top: 15px; display: flex; justify-content: center; gap: 15px;">
+     <a href="https://www.instagram.com/hlumisi_imfundo_official/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+         <i class="fab fa-instagram" style="font-size: 14px;"></i>
+         <small>Instagram</small>
+     </a>
+     
+     <a href="https://www.facebook.com/p/HlumisImfundo-Academy-100064421240749/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+         <i class="fab fa-facebook-f" style="font-size: 14px;"></i>
+         <small>Facebook</small>
+     </a>
+     
+     <a href="https://b2bhint.com/en/company/za/hlumisimfundo-foundation--K2021457252" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 5px;">
+         <i class="fas fa-briefcase" style="font-size: 14px;"></i>
+         <small>Registry</small>
+     </a>
+ </div>
 </footer>
 <script src="JAVASCRIPT/JavaScript.js"></script>
 </body>
